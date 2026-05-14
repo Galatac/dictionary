@@ -108,8 +108,8 @@ function loadDict(lang, history) {
 			if(history)
 				pushHistory();
 
-			$(".natlang").text(languages[language][0]);
-			$(".natlang_lower").text(languages[language][1]);
+			$(".natlang").text(languages[language][1]);
+			$(".natlang_lower").text(languages[language][0]);
 			$("#dictselector").val(language);
 
 			localStorage.setItem("language", language);
