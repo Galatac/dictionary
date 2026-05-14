@@ -1,17 +1,7 @@
 let dictionary, language, re;
 const tables = ["#results_occ", "#results_nat"];
 const languages = {
-	en:	["Anglés",	"anglés"],
-	de:	["German",	"german"],
-	cn:	["Chinés",	"chinés"],
-	ru:	["Russ",	"russ"],
-	eo:	["Esperanto",	"Esperanto"],
-	es:	["Hispan",	"hispan"],
-	val:	["Valencian",	"valencian"],
-	bal:	["Balearic",	"balearic"],
-	an:	["Aragonés",	"aragonés"],
-	gl:	["Galician",	"galician"],
-	pt:	["Portugalés",	"portugalés"]
+	en:	["Anglac",	"anglac"],
 };
 
 $(document).ready(function() {
