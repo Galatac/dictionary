@@ -131,11 +131,11 @@ function pushHistory() {
 }
 
 function searchOcc(entry) {
-	return re.test(entry[1]);
+	return re.test(entry[0]);
 }
 
 function searchNat(entry) {
-	return re.test(entry[0]);
+	return re.test(entry[1]);
 }
 
 function doSearch(history) {
