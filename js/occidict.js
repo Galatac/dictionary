@@ -107,7 +107,8 @@ $(document).ready(function() {
 
 function loadDict(lang, history) {
 	language = lang;
-	Papa.parse("data/" + language + "-ie.csv", {
+	// Just pull from published google sheet
+	Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTsRfDsnEPJ_R1HauI5vFNKd5ukedNLAZm51gVIPXPPkK9mq432BgxIPEmIhbWDLEMEu5u97QfFuoFo/pub?gid=1340253820&single=true&output=tsv", {
 		download: true,
 		header: false,
 		skipEmptyLines: true,
@@ -186,7 +187,15 @@ function doSearch(history) {
 					});
 					entries.forEach(function(e) {
 						e.forEach(function(r) {
-							$(tables[i]).append("<tr><td>" + r[1-i] + "</td><td>" + r[i] + "</td></tr>");
+							$(tables[i]).append(
+								"<tr>" +
+									"<td>" + r[i] + "</td>" +              // headword (col searched)
+									"<td>" + r[1-i] + "</td>" +            // translation
+									"<td>" + (r[2] || "") + "</td>" +      // Part of Speech
+									"<td>" + (r[3] || "") + "</td>" +      // Source
+									"<td>" + (r[4] || "") + "</td>" +      // Notes
+								"</tr>"
+							);
 						});
 					});
 					$(tables[i]).show();
