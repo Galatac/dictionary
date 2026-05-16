@@ -5,6 +5,11 @@ body {
 	color: white;
 }
 
+::selection {
+	background: #965e57ff;
+	color: white;
+}
+
 #logo, #logo2 {
 	width: 150px;
 	border: 5px solid #1C3B73;
