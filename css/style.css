@@ -25,16 +25,16 @@ body {
 	display: none;
 	margin: 30px auto auto auto;
 	width: 40%;
-	border: 1px solid #1C3B73;
+	border: 1px solid #965e57ff;
 	border-collapse: collapse;
 }
 
 .results_table tr {
-	background: white;
+	background: #cfcfcf;
 }
 
 .results_table tr:nth-child(odd) {
-	background: #eee;
+	background: #aeaeae;
 }
 
 .results_table tr:nth-child(1) {
@@ -79,11 +79,11 @@ body {
 	border: 1px solid #1C3B73;
 	border-radius: 10px;
 	cursor: pointer;
-	color: white;
+	color: #cfcfcf;
 }
 
 #searchbutton:hover {
-	background: white;
+	background: #cfcfcf;
 	color: #1C3B73;
 }
 
