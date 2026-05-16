@@ -56,7 +56,6 @@ body {
 }
 
 .results_table td {
-	width: 50%;
 	text-align: left;
 	padding: 5px;
 	color: black;
@@ -64,7 +63,6 @@ body {
 
 .results_table th {
 	padding: 5px;
-	width: 50%;
 	color: #222;
 }
 
