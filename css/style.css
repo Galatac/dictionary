@@ -48,6 +48,7 @@ body {
 	background: #1C3B73;
 	color: white;
 	border: 1px solid #1C3B73;
+	border-bottom: 4px solid #965e57ff;
 }
 
 .results_table td {
