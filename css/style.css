@@ -1,7 +1,7 @@
 body {
 	font-family: sans-serif;
 	text-align: center;
-	background: #deb887;
+	background: #222;
 	color: black;
 }
 
@@ -60,7 +60,7 @@ body {
 	outline: none;
 	display: block;
 	margin: 20px auto;
-	background-color: #deb887;
+	background-color: #222;
 	border: 2px solid #1C3B73;
 	border-radius: 5px;
 }
