@@ -50,10 +50,9 @@ body {
 }
 
 .results_table tr:first-child {
-	background: #1C3B73;
+	background: #965e57ff;
 	color: white;
 	border: 1px solid #1C3B73;
-	border-bottom: 4px solid #965e57ff;
 }
 
 .results_table td {
