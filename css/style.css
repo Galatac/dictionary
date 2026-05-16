@@ -17,6 +17,11 @@ body {
 	display: inline-block;
 }
 
+#logo_link:focus-visible {
+	outline: 3px solid #965e57ff;
+	outline-offset: 4px;
+}
+
 #logo2 + #logo {
 	display: none;
 }
@@ -31,13 +36,15 @@ body {
 
 .results_table tr {
 	background: #cfcfcf;
+	color: #222;
 }
 
 .results_table tr:nth-child(odd) {
 	background: #aeaeae;
+	color: #222;
 }
 
-.results_table tr:nth-child(1) {
+.results_table tr:first-child {
 	background: #1C3B73;
 	color: white;
 	border: 1px solid #1C3B73;
@@ -47,29 +54,44 @@ body {
 	width: 50%;
 	text-align: left;
 	padding: 5px;
+	color: #222;
 }
 
 .results_table th {
 	padding: 5px;
 	width: 50%;
+	color: white;
 }
 
 #dictselector {
 	font-size: 20px;
 	text-align: center;
-	outline: none;
 	display: block;
 	margin: 20px auto;
 	background-color: #222;
+	color: white;
 	border: 2px solid #1C3B73;
 	border-radius: 5px;
+	padding: 4px 8px;
+}
+
+#dictselector:focus-visible {
+	outline: 3px solid #965e57ff;
+	outline-offset: 2px;
 }
 
 #searchfield {
 	height: 30px;
 	font-size: 20px;
 	width: 30%;
-	outline: none;
+	padding: 0 8px;
+	border: 2px solid #1C3B73;
+	border-radius: 5px;
+}
+
+#searchfield:focus-visible {
+	outline: 3px solid #965e57ff;
+	outline-offset: 2px;
 }
 
 #searchbutton {
@@ -79,17 +101,23 @@ body {
 	border: 1px solid #1C3B73;
 	border-radius: 10px;
 	cursor: pointer;
-	color: #cfcfcf;
+	color: white;
 }
 
 #searchbutton:hover {
-	background: #cfcfcf;
-	color: #1C3B73;
+	background: #965e57ff;
+	color: white;
+	border-color: #965e57ff;
+}
+
+#searchbutton:focus-visible {
+	outline: 3px solid #965e57ff;
+	outline-offset: 2px;
 }
 
 #info {
 	margin: 5px 0px;
-	font-size: small;
+	font-size: 0.95rem;
 	font-style: italic;
 }
 
