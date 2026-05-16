@@ -52,20 +52,20 @@ body {
 .results_table tr:first-child {
 	background: #965e57ff;
 	color: white;
-	border: 1px solid #1C3B73;
+	border: 1px solid #965e57ff;
 }
 
 .results_table td {
 	width: 50%;
 	text-align: left;
 	padding: 5px;
-	color: #222;
+	color: black;
 }
 
 .results_table th {
 	padding: 5px;
 	width: 50%;
-	color: white;
+	color: #222;
 }
 
 #dictselector {
