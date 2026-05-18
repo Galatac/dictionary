@@ -276,19 +276,6 @@ body {
   table-layout: auto;
 }
 
-/* Column widths: Galatac and native columns get balanced space,
-   Part of Speech gets just enough not to wrap, Source/Notes flex. */
-.results_table th:nth-child(1),
-.results_table td:nth-child(1) { width: 18%; }
-.results_table th:nth-child(2),
-.results_table td:nth-child(2) { width: 22%; }
-.results_table th:nth-child(3),
-.results_table td:nth-child(3) { width: 12%; }
-.results_table th:nth-child(4),
-.results_table td:nth-child(4) { width: 16%; }
-.results_table th:nth-child(5),
-.results_table td:nth-child(5) { width: 32%; }
-
 /* The top header row — table title, museum-catalogue style.
    "English → Galatac" or "Galatac → English". */
 .results_table tr:first-child th {
