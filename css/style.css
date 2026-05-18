@@ -283,7 +283,7 @@ body {
 .results_table th:nth-child(2),
 .results_table td:nth-child(2) { width: 22%; }
 .results_table th:nth-child(3),
-.results_table td:nth-child(3) { width: 12%; white-space: nowrap; }
+.results_table td:nth-child(3) { width: 12%; }
 .results_table th:nth-child(4),
 .results_table td:nth-child(4) { width: 16%; }
 .results_table th:nth-child(5),
