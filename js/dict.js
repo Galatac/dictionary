@@ -159,7 +159,7 @@ function doSearch(history) {
 		if($("#search_nat").is(":checked"))
 			results[1] = dictionary.filter(searchNat);
 
-		$(document).prop("title", query_raw + " – OcciDict");
+		$(document).prop("title", query_raw + " – Galatac Dictionary");
 
 		if(results[0].length > 0 || results[1].length > 0) {
 			$(".results_table tr:has(td)").remove();
@@ -197,5 +197,5 @@ function doSearch(history) {
 		}
 	}
 	else
-		$(document).prop("title", "OcciDict");
+		$(document).prop("title", "Galatac Dictionary");
 }
