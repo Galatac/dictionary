@@ -143,8 +143,7 @@ body {
   padding: 0.6rem 1rem;
   border-radius: 2px;
   cursor: pointer;
-  margin: 0 0 1rem;
-  margin-left: auto; margin-right: auto;
+  margin: 0 auto 1rem;
   display: block;
   width: auto;
   min-width: 200px;
@@ -274,7 +273,21 @@ body {
   font-size: 0.98rem;
   border-top: 1px solid var(--rule-strong);
   border-bottom: 1px solid var(--rule-strong);
+  table-layout: auto;
 }
+
+/* Column widths: Galatac and native columns get balanced space,
+   Part of Speech gets just enough not to wrap, Source/Notes flex. */
+.results_table th:nth-child(1),
+.results_table td:nth-child(1) { width: 18%; }
+.results_table th:nth-child(2),
+.results_table td:nth-child(2) { width: 22%; }
+.results_table th:nth-child(3),
+.results_table td:nth-child(3) { width: 12%; white-space: nowrap; }
+.results_table th:nth-child(4),
+.results_table td:nth-child(4) { width: 16%; }
+.results_table th:nth-child(5),
+.results_table td:nth-child(5) { width: 32%; }
 
 /* The top header row — table title, museum-catalogue style.
    "English → Galatac" or "Galatac → English". */
@@ -395,18 +408,24 @@ body {
     padding: 0.7rem;
   }
 
+  /* Mobile: make tables horizontally scrollable, no layout change.
+     Wrap each table in a scrolling container, set a minimum width so
+     columns don't collapse and the user just swipes right to read more. */
   .results_table {
-    font-size: 0.92rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    min-width: 100%;
   }
-  .results_table td,
-  .results_table th {
-    padding: 0.55rem 0.5rem;
+  .results_table tr {
+    display: table;
+    width: 100%;
+    min-width: 720px;
+    table-layout: fixed;
   }
-  /* Hide source/notes on the smallest screens to keep table readable */
-  .results_table td:nth-child(4),
-  .results_table td:nth-child(5),
-  .results_table th:nth-child(4),
-  .results_table th:nth-child(5) {
-    display: none;
+  /* The Notes column tends to be longest — allow it to wrap inside the row */
+  .results_table td {
+    white-space: normal;
   }
 }
