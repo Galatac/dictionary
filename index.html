@@ -2,12 +2,12 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>OcciDict</title>
-		<meta name="description" content="Dictionariums traserchabil por Occidental (Interlingue) con apert e líber data.">
+		<title>Galatac Dictionary</title>
+		<meta name="description" content="A searchable dictionary for Galatac, the reborn Gaulish language.">
 		<meta property="og:title" content="Galatac Dictionary">
 		<meta property="og:site_name" content="Galatac Dictionary">
 		<meta property="og:type" content="website">
-		<meta property="og:description" content="Dictionariums traserchabil por Occidental (Interlingue) con apert e líber data.">
+		<meta property="og:description" content="A searchable dictionary for Galatac, the reborn Gaulish language.">
 		<meta property="og:url" content="https://galatac.github.io/dictionary/">
 		<meta property="og:image" content="https://galatac.github.io/dictionary/img/battersea1.jpg">
 
@@ -23,17 +23,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-		<a href="https://galatac.github.io" id="logo_link"><img src="https://galatac.github.io/dictionary/img/battersea1.jpg" id="logo" alt="Battersea Shield, River Thames, England, c. 350-50 BCE. A La Tène artifact"></a>
+		<a href="https://galatac.github.io" id="logo_link"><img src="https://galatac.github.io/battersea-tetraskelion-small.png" id="logo" alt="Tetraskelion from the Battersea Shield. River Thames, England, c. 350-50 BCE"></a>
+		<h1 class="page-title">Galatac Dictionary</h1>
+		<p class="page-subtitle">Lexicon · Gallica</p>
 
 		<select name="dictselector" id="dictselector">
 			<option value="en">Galatac &ndash; English</option>
 		</select>
-			
-		<input type="text" id="searchfield" autocomplete="off" value="">
-		<button onclick="doSearch(true)" id="searchbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+		<div class="search-bar">
+			<input type="text" id="searchfield" autocomplete="off" value="" placeholder="Search…">
+			<button onclick="doSearch(true)" id="searchbutton" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+		</div>
+
 		<div id="info">Asterisco (*) es usabil quam marca substitutiv.</div>
-		<input type="checkbox" id="search_nat" checked><label for="search_nat"> Sai en <span class="natlang_lower">English</span></label>
-		<input type="checkbox" id="search_occ" checked><label for="search_occ"> Sai en Galatac</label>
+
+		<div class="search-options">
+			<label><input type="checkbox" id="search_nat" checked> Sai en <span class="natlang_lower">English</span></label>
+			<label><input type="checkbox" id="search_occ" checked> Sai en Galatac</label>
+		</div>
 
 		<div id="noresults">Nil penlose</div>
 
