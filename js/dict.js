@@ -102,6 +102,12 @@ function loadDict(lang, history) {
 		download: true,
 		header: false,
 		skipEmptyLines: true,
+		delimiter: "\t",
+		// Source/Notes cells contain literal " characters. Papa's default
+		// quoteChar is ", so a cell starting with " makes it consume rows
+		// until a closing quote, silently dropping entries (e.g. "rodi").
+		// Point quoteChar at a char that never occurs to disable quoting.
+		quoteChar: "\u0000",
 		complete: function(results) {
 			dictionary = results.data.slice(1);
 
